@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex001 - Javascript</title>
+</head>
+<style>
+    body {
+        background-color: rgba(219, 219, 12, 0.57);
+    }
+    h1.logo{
+        position: absolute;
+        padding: 20px;
+        margin: 0;
+        background: yellow;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+        
+    }
+</style>
+<body>
+    
+    <h1 class="logo">
+        JS
+    </h1>
+    <!--Javascript é case-sensitive-->
+    <script>
+        //window.prompt retorna string
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+
+        window.alert('A soma dos valores é ' + String(s) + '.')
+        
+        //utilizando crase:
+        window.alert(`O resultado da soma entre ${n1} e ${n2} é ${s}.`)
+
+        // concatenar
+        // number + number para adição 2+2=4
+        // string + string para concatenação 2+2=22
+
+        //para converter para inteiro use Number.parseInt(n)
+        //para converter para float use Number.parseFloat(n)
+
+        // o javacript pode fazer a conversão automaticamente com o comando Number()
+
+        //converter número p string usar String(n) ou n.toString()
+
+        
+
+    </script>
+    <p>Bem vindo!</p>
+</body>
+</html>

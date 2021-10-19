@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual o seu nome?')
+
+        document.write(`Oi <strong>${nome}</strong>! O seu nome tem ${nome.length} letras.<br/>`)
+
+        document.write(`Seu nome em maiúsculas fica assim: ${nome.toUpperCase()}.<br/>`)
+
+        document.write(`Seu nome em minúsculas fica assim: ${nome.toLowerCase()}.<br/>`)
+
+        //Formatando números:
+
+        var n1 = 1545.5
+        
+        //usando to.Fixed(), o número dentro dos parênteses define o número de casas decimais
+        document.write('<strong>Usando o .toFixed:</strong> </br>')
+        document.write(`${n1.toFixed(2)}<br/>`)
+        
+        /*----------------------------------------------------------------------
+        *usando .toFixed().replace, dentro dos parênteses coloca-se entre aspas
+        *primeiro o que deseja substituir, depois com o que deseja substituir*/
+
+        document.write('<strong>Convertendo o ponto em vírgula com replace:</strong> </br>')
+        document.write(`${n1.toFixed(2).replace('.', ',')}</br>`)
+
+        /*--------------------------------------------------------------------------------
+        *formatando para moeda com o .toLocaleString(), dentro dos parênteses primeiro
+        *se define o local de objetivo, exemplo 'pt-br', depois se 
+        *define o style: para 'currency' (dinheiro) e depois na currency: define a moeda.
+        */
+        document.write('<strong>Formatando como moeda:</strong> </br>')
+
+        document.write(`Moeda brasileira: ${n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</br>`)
+        
+        document.write(`Dólar: ${n1.toLocaleString('pt-br', {style: 'currency', currency: 'USD'})}</br>`)
+        
+        document.write(`Euro: ${n1.toLocaleString('pt-br', {style: 'currency', currency: 'EUR'})}</br>`)
+
+    </script>
+
+
+</body>
+</html>
