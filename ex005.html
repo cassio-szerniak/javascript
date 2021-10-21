@@ -5,8 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiros Passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
 </head>
 <body>
     <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em Javascript</p>
+    
+    <div id="msg">Clique em mim</div>
+    <br>
+
+    <script>
+        //neste exemplo, zero é o primeiro parágrafo, 1 o segundo, e assim por diante
+        var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = 'yellow'
+
+        //innerText é o texto que está dentro do elemento, sendo que não puxa a formatação
+        document.writeln(`Está escrito: ${p1.innerText}</br>`) 
+
+        //usando innerHTML puxa e exibe a formatação do texto
+        var p1 = window.document.getElementsByTagName('p')[1]
+        document.write(`</br>Usando .innerHTML puxa a formatação: ${p1.innerHTML}`)
+        
+        //posso mudar um estilo assim:
+        p1.style.color = 'black'
+
+        var corpo = window.document.body
+        corpo.style.background = 'blue'
+
+        var d = window.document.getElementById('msg')
+
+        d.style.background = 'green'
+        d.style.color = 'black'
+        d.innerText = 'Estou aguardando...'
+
+        //Utilizando o Seletor querySelector() ou querySelectorAll()
+        
+        //hashtag # puxa o id, já o ponto . puxa a class
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'black'
+
+        
+    
+    </script>
 </body>
 </html>
